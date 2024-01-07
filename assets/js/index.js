@@ -14,16 +14,16 @@ const container = $('.container.time-block');
   hours.map(hour => {
     const row = $("<div class='row'>");
     const currentHr = dayjs().hour(hour).format('hA');
-    const hr = $("<div class='hour col-2'>").text(currentHr);
+    const hr = $("<div class='hour col-1'>").text(currentHr);
     row.append(hr);
-    const textArea = $("<textarea class='col-8'>");
+    const textArea = $("<textarea class='col-10'>");
     handleColor(hour, currentTime, textArea);
     if (taskkeys.includes(currentHr)) {
       textArea.text(savedTasks[currentHr]);
     }
     row.append(textArea);
     const btnImg = "<img src='./images/save-icon.svg' class='icon' alt='Save' width='20' height='20'></img>"
-    const btn = $("<button class='saveBtn col-2'>").append(btnImg);
+    const btn = $("<button class='saveBtn col-1'>").append(btnImg);
     row.append(btn);
     container.append(row);
   })
