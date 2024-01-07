@@ -70,3 +70,11 @@ header {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+.disabled {
+  opacity: 50%;
+}
+
+.icon {
+  pointer-events: none;
+}
